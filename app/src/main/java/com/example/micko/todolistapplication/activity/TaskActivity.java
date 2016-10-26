@@ -31,13 +31,12 @@ public class TaskActivity  extends AppCompatActivity {
         ID = intent.getIntExtra(PageFragment.ID, -1);
         String title = intent.getStringExtra(PageFragment.TITLE);
         String description = intent.getStringExtra(PageFragment.DESCRIPTION);
-        boolean isDone = intent.getBooleanExtra(PageFragment.ISDONE, false);
 
         TextView textViewTitle = (TextView) findViewById(R.id.text_view_title);
         TextView textViewDescription = (TextView) findViewById(R.id.text_view_description);
 
 
-        textViewTitle.setText(title);
+        textViewTitle.setText("\n" + title);
         textViewDescription.setText("\n" + description);
 
         db = new DatabaseHandler(this);

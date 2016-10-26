@@ -51,7 +51,7 @@ public class ListViewAdapter extends ArrayAdapter<Task> {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.checkBox.setTag(position); // This line is important.
+        holder.checkBox.setTag(position);
 
         holder.taskTitle.setText(getItem(position).getTitle());
         holder.checkBox.setChecked(getItem(position).isDone());
