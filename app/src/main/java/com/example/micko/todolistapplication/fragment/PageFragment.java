@@ -74,6 +74,7 @@ public class PageFragment extends Fragment {
 
     private void readDataFromDatabase() {
 
+        //done or not done tasks
         boolean done = false;
         if(this.getArguments().getInt(ARG_PAGE_NUMBER) == 2){
             done = true;
@@ -86,6 +87,8 @@ public class PageFragment extends Fragment {
         return new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //in first fragment on first position is header view and because of that
+                // we need to decrement index
                 int move = 0;
                 if(pageNumber == 1) {
                     move = 1;
